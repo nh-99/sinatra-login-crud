@@ -1,0 +1,7 @@
+%form{:method => 'post', :action => '/logout'}
+	%input{:type => 'submit', :value => 'logout'}
+%hr
+%h1= "You are logged in: #{user}!"
+%a{:href => '/posts/create'} Create new Post
+|
+%a{:href => '/posts/manage'} Manage Posts

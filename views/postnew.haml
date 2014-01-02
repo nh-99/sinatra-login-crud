@@ -1,0 +1,22 @@
+%form{:method => 'post', :action => '/logout'}
+	%input{:type => 'submit', :value => 'logout'}
+%hr
+%h1= "You are logged in: #{user}!"
+%a{:href => '/posts/create'} Create new Post
+|
+%a{:href => '/posts/manage'} Manage Posts
+
+%hr
+%h1 Create new Post
+%form{:method => 'post', :action => '/posts/new'}
+	%label Title
+	%input{:type => 'text', :name => 'posts[title]'}
+
+	%br
+
+	%label Content
+	%textarea{:name => 'posts[content]'}
+
+	%br
+
+	%input{:type => 'submit', :value => 'Create new Post'}
